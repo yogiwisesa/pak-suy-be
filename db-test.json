@@ -1,0 +1,44 @@
+{
+  "notes": [
+    {
+      "groupName": "Kalkulus-2",
+      "groupId": -12332,
+      "date": "2020-11-12",
+      "notes": [
+        {
+          "from": "Yogi Wisesa",
+          "body": "mantap"
+        },
+        {
+          "from": "Yogi Wisesa",
+          "body": "mantap"
+        },
+        {
+          "from": "Yogi Wisesa",
+          "body": "Pada jaman dahulu"
+        }
+      ]
+    }
+  ],
+  "groups": [
+    {
+      "groupId": -424092170,
+      "groupName": "Kalkulus",
+      "teacher": {
+        "username": "yogiwisesa",
+        "firstName": "Yogi Wisesa",
+        "id": 133046982
+      },
+      "students": [
+        {
+          "username": "yogiwisesa",
+          "firstName": "Yogi Wisesa",
+          "id": 133046982,
+          "parentId": 1234
+        }
+      ]
+    }
+  ],
+  "examAnswer": [],
+  "examProblem": []
+}

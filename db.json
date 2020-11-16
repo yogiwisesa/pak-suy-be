@@ -1,0 +1,391 @@
+{
+  "notes": [
+    {
+      "groupId": -424092170,
+      "date": "2020-11-11",
+      "notes": [
+        {
+          "from": "Yogi Wisesa",
+          "body": "catat ini"
+        },
+        {
+          "from": "Yogi Wisesa",
+          "body": "catat ini juga ya"
+        },
+        {
+          "from": "Yogi Wisesa",
+          "body": "yang ini jangan lupa"
+        },
+        {
+          "from": "Yogi Wisesa",
+          "body": "jangan lupa catat ini"
+        },
+        {
+          "from": "Yogi Wisesa",
+          "body": "catat yang ini ya"
+        },
+        {
+          "from": "Yogi Wisesa",
+          "body": "ini juga ya"
+        },
+        {
+          "from": "Yogi Wisesa",
+          "body": "yang ini di grup"
+        }
+      ]
+    },
+    {
+      "groupName": "Kalkulus",
+      "groupId": -424092170,
+      "date": "2020-11-12",
+      "notes": [
+        {
+          "from": "Yogi Wisesa",
+          "body": "cata kali ini"
+        },
+        {
+          "from": "Yogi Wisesa",
+          "body": "https://youtu.be/KY_4DfVGy_g"
+        },
+        {
+          "from": "Yogi Wisesa",
+          "body": "catat yang ini dong Pak https://youtu.be/KY_4DfVGy_g"
+        },
+        {
+          "from": "Yogi Wisesa",
+          "body": "Pak catat ini https://www.youtube.com/watch?v=LHCob76kigA&list=RDMMCbFnC9pk7oQ&index=27 sama ini dong https://youtu.be/KY_4DfVGy_g"
+        },
+        {
+          "from": "Yogi Wisesa",
+          "body": "Pak catat ini https://www.youtube.com/watch?v=LHCob76kigA&list=RDMMCbFnC9pk7oQ&index=27 sama ini dong https://youtu.be/KY_4DfVGy_g"
+        },
+        {
+          "from": "Yogi Wisesa",
+          "body": "Pak catat ini https://www.youtube.com/watch?v=LHCob76kigA&list=RDMMCbFnC9pk7oQ&index=27 sama ini dong https://youtu.be/KY_4DfVGy_g"
+        },
+        {
+          "from": "Yogi Wisesa",
+          "body": "Pak catat ini https://www.youtube.com/watch?v=LHCob76kigA&list=RDMMCbFnC9pk7oQ&index=27 sama ini dong https://youtu.be/KY_4DfVGy_g"
+        },
+        {
+          "from": "Yogi Wisesa",
+          "body": "Pak catat ini https://www.youtube.com/watch?v=LHCob76kigA&list=RDMMCbFnC9pk7oQ&index=27 sama ini dong https://youtu.be/KY_4DfVGy_g"
+        }
+      ]
+    }
+  ],
+  "groups": [
+    {
+      "groupId": -424092170,
+      "groupName": "Kalkulus",
+      "teacher": {
+        "username": "yogiwisesa",
+        "firstName": "Yogi Wisesa",
+        "id": 133046982
+      },
+      "students": [
+        {
+          "username": "yogiwisesa",
+          "firstName": "Yogi Wisesa",
+          "id": 133046982,
+          "parentId": 133046982
+        },
+        {
+          "username": "mademahatti",
+          "firstName": "Mahatti",
+          "lastName": "Prayascita",
+          "id": 1275059352,
+          "parentId": 133046982
+        }
+      ]
+    }
+  ],
+  "examAnswer": [
+    {
+      "title": "Nama- Nama Penemu",
+      "groupId": -424092170,
+      "examId": "3a1622ba-718e-4823-8839-5081509dddb8",
+      "studentId": 1275059352,
+      "studentName": "Mahatti",
+      "correctAnswerCount": 0,
+      "problems": [
+        {
+          "problem": "Nama Penemu Lampu",
+          "answers": [
+            "Mas Thomas",
+            "Mas Andre",
+            "Mas Dul"
+          ],
+          "correctAnswer": "Mas Thomas",
+          "answer": "Mas Dul"
+        },
+        {
+          "problem": "Nama Penemu Komputer",
+          "answers": [
+            "Alexander Graham Bell",
+            "Bill Gates",
+            " Charles Babbage"
+          ],
+          "correctAnswer": " Charles Babbage",
+          "answer": "Alexander Graham Bell"
+        },
+        {
+          "problem": "Nama Babang Bakso",
+          "answers": [],
+          "correctAnswer": "essay",
+          "answer": "Mas Kabur"
+        }
+      ]
+    },
+    {
+      "title": "Nama- Nama Penemu",
+      "groupId": -424092170,
+      "examId": "3a1622ba-718e-4823-8839-5081509dddb8",
+      "studentId": 133046982,
+      "studentName": "Yogi Wisesa",
+      "correctAnswerCount": 0,
+      "problems": [
+        {
+          "problem": "Nama Penemu Lampu",
+          "answers": [
+            "Mas Thomas",
+            "Mas Andre",
+            "Mas Dul"
+          ],
+          "correctAnswer": "Mas Thomas",
+          "answer": "Mas Andre"
+        },
+        {
+          "problem": "Nama Penemu Komputer",
+          "answers": [
+            "Alexander Graham Bell",
+            "Bill Gates",
+            " Charles Babbage"
+          ],
+          "correctAnswer": " Charles Babbage",
+          "answer": "Bill Gates"
+        },
+        {
+          "problem": "Nama Babang Bakso",
+          "answers": [],
+          "correctAnswer": "essay",
+          "answer": "Mas Kadir"
+        }
+      ]
+    },
+    {
+      "title": "Ujian Trigonometri",
+      "groupId": -424092170,
+      "examId": "ad6453e9-4625-4fbb-bf1d-a1f98822823d",
+      "studentId": 133046982,
+      "studentName": "Yogi Wisesa",
+      "correctAnswerCount": 2,
+      "problems": [
+        {
+          "problem": "X= 1, berapakah y?A",
+          "answers": [
+            "10",
+            "12",
+            "30"
+          ],
+          "correctAnswer": "12",
+          "answer": "12"
+        },
+        {
+          "problem": "Z = Y, Y = X + 2. Berapakah C?",
+          "answers": [
+            "1",
+            "2",
+            "3"
+          ],
+          "correctAnswer": "2",
+          "answer": "2"
+        }
+      ]
+    }
+  ],
+  "examProblem": [
+    {
+      "title": "Fisika Dasar",
+      "duration": "3600",
+      "groupId": -424092170,
+      "id": "6",
+      "problems": [
+        {
+          "problem": "Siapa nama penemu lampu??",
+          "answers": [
+            "Thomas A. Edison",
+            "Jeff Dean",
+            "Albert Roy",
+            "Wayan Lampu"
+          ],
+          "correctAnswer": "Thomas A. Edison"
+        },
+        {
+          "problem": "Siapa nama penemu lampu?",
+          "answers": [
+            "Thomas A. Edison",
+            "Jeff Dean",
+            "Albert Roy",
+            "Wayan Lampu"
+          ],
+          "correctAnswer": "Thomas A. Edison"
+        }
+      ]
+    },
+    {
+      "title": "Fisika Dasar",
+      "duration": "3600",
+      "groupId": -424092171,
+      "id": "2",
+      "problems": [
+        {
+          "problem": "Siapa nama penemu lampu??",
+          "answers": [
+            "Thomas A. Edison",
+            "Jeff Dean",
+            "Albert Roy",
+            "Wayan Lampu"
+          ],
+          "correctAnswer": "Thomas A. Edison"
+        },
+        {
+          "problem": "Siapa nama penemu lampu?",
+          "answers": [
+            "Thomas A. Edison",
+            "Jeff Dean",
+            "Albert Roy",
+            "Wayan Lampu"
+          ],
+          "correctAnswer": "Thomas A. Edison"
+        }
+      ]
+    },
+    {
+      "title": "Nama- Nama Penemu",
+      "duration": "60",
+      "groupId": -424092170,
+      "id": "3a1622ba-718e-4823-8839-5081509dddb8",
+      "problems": [
+        {
+          "problem": "Nama Penemu Lampu",
+          "answers": [
+            "Mas Thomas",
+            "Mas Andre",
+            "Mas Dul"
+          ],
+          "correctAnswer": "Mas Thomas"
+        },
+        {
+          "problem": "Nama Penemu Komputer",
+          "answers": [
+            "Alexander Graham Bell",
+            "Bill Gates",
+            " Charles Babbage"
+          ],
+          "correctAnswer": " Charles Babbage"
+        },
+        {
+          "problem": "Nama Babang Bakso",
+          "answers": [],
+          "correctAnswer": "essay"
+        }
+      ]
+    },
+    {
+      "title": "Teori Atom",
+      "duration": "40",
+      "groupId": -424092170,
+      "id": "6ad6d0be-da4e-4655-8510-59a0ddd1a339",
+      "problems": [
+        {
+          "problem": "Nama",
+          "answers": [
+            "Nama",
+            "Nama"
+          ],
+          "correctAnswer": "Nama"
+        }
+      ]
+    },
+    {
+      "title": "Ujian Trigonometri",
+      "duration": "50",
+      "groupId": -424092170,
+      "id": "ad6453e9-4625-4fbb-bf1d-a1f98822823d",
+      "problems": [
+        {
+          "problem": "X= 1, berapakah y?A",
+          "answers": [
+            "10",
+            "12",
+            "30"
+          ],
+          "correctAnswer": "12"
+        },
+        {
+          "problem": "Z = Y, Y = X + 2. Berapakah C?",
+          "answers": [
+            "1",
+            "2",
+            "3"
+          ],
+          "correctAnswer": "2"
+        }
+      ]
+    },
+    {
+      "title": "Buat Baru ID Panjang",
+      "duration": "120",
+      "groupId": -424092170,
+      "id": "effe96ee-c7ca-407d-a58f-ff9b19d6e776",
+      "problems": [
+        {
+          "problem": "Buat Baru 1",
+          "answers": [
+            "Buat Baru 1"
+          ],
+          "correctAnswer": "Buat Baru 1"
+        },
+        {
+          "problem": "Soal yang ini susah banget",
+          "answers": [
+            "Bambang Pamungkas",
+            "Bambang Budiman",
+            "Bambang Ya"
+          ],
+          "correctAnswer": "Bambang Pamungkas"
+        }
+      ]
+    }
+  ],
+  "reminder": [
+    {
+      "groupId": -424092170,
+      "date": "2030-12-21",
+      "isNotified": false
+    },
+    {
+      "groupId": -424092170,
+      "date": "2020-11-18",
+      "isNotified": true
+    },
+    {
+      "groupId": -424092170,
+      "date": "2020-11-18",
+      "isNotified": false
+    },
+    {
+      "groupId": -424092170,
+      "date": "2020-11-18",
+      "isNotified": false,
+      "type": "tugas"
+    },
+    {
+      "groupId": -424092170,
+      "date": "2020-11-18",
+      "isNotified": false,
+      "type": "tugas"
+    }
+  ]
+}
