@@ -86,6 +86,7 @@ app.post('/api/submit-exam', async (req, res) => {
   if (student?.parentId) {
     let countChoice = 0;
     let countEssay = 0;
+    // @ts-ignore
     body.problems.forEach((problem) => {
       if (problem.answers.length) {
         countChoice += 1;

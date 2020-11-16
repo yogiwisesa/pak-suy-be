@@ -1,6 +1,7 @@
 import { TelegrafContext } from 'telegraf/typings/context';
 import dayjs from 'dayjs';
 import qs from 'qs';
+// @ts-ignore
 import et from 'extract-tanggal';
 
 import { KataPredict } from '../api';

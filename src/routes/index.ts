@@ -116,7 +116,8 @@ router.get('/api/exam/result/:examId', (req, res) => {
     console.log(`-- Student Name: ${exam.studentName} --`);
     exam.problems.forEach((problem, index) => {
       console.log(`Test: ${problem.answer}`);
-      let similars = [];
+      // @ts-ignore
+      const similars = [];
       // const compares = exams.map((examTarget) => examTarget.problems[index].answer);
       // console.log(`Compare to: ${compares}`);
       // const scores = stringSimilarity.findBestMatch(problem.answer, compares);
@@ -141,7 +142,8 @@ router.get('/api/exam/result/:examId', (req, res) => {
         });
       }
 
-      problem.similars = similars;
+      // @ts-ignore
+      problem.similars = similars; // eslint-disable-line
     });
   });
 
