@@ -30,6 +30,12 @@ app.use(routes);
 
 botHandler(bot);
 
+app.get('/', async (req, res) => {
+  return res.send({
+    status: 'ok'
+  });
+});
+
 app.get('/api/start-exam/:examId', async (req, res) => {
   const { examId } = req.params;
 
