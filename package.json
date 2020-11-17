@@ -50,7 +50,6 @@
     "express": "^4.17.1",
     "extract-tanggal": "^1.0.2",
     "husky": "^4.3.0",
-    "knex": "^0.21.12",
     "lint-staged": "^10.5.1",
     "lodash": "^4.17.20",
     "lowdb": "^1.0.0",
