@@ -141,6 +141,9 @@ const checkReminder = () => {
       'Hai, Orang tua siswa. Saya mau mengingatkan besok anak anda ada ujian, mohon diingatkan untuk belajar 🥇';
     let groupMsg = 'Jangan lupa ya besok kita ada ujian 😄';
     let studentMsg = 'Hai, jangan lupa belajar ya, besok ada ujian 😁';
+
+    db.get('reminder').find(reminder).assign({ isNotified: true }).write();
+
     if (reminder.type === 'tugas') {
       groupMsg = 'Jangan lupa ya besok harus mengumpulkan tugas 🙏';
       parentMsg =
@@ -156,6 +159,7 @@ const checkReminder = () => {
       await bot.telegram.sendMessage(student.parentId || '', parentMsg);
     });
   });
+
   console.log(reminders);
 };
 
