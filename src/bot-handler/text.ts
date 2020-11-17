@@ -100,9 +100,11 @@ export const handleKata = async (ctx: TelegrafContext) => {
 
   if (data.result?.kata.length && time && (isTugas || isUjian)) {
     const date = et(text);
-    console.log('Reminder date: ', date.DateExtracted);
-    console.log('Current date: ', dayjs().format('YYYY-MM-DD HH:mm:ss'));
-    if (dayjs(date.DateExtracted, 'YYYY-MM-DD').isAfter(dayjs())) {
+    console.log('Reminder date: ', dayjs(date.DateExtracted, 'YYYY-MM-DD').tz('Asia/Jakarta'));
+    console.log('Current date: ', dayjs().tz('Asia/Jakarta').format('YYYY-MM-DD HH:mm:ss'));
+    if (
+      dayjs(date.DateExtracted, 'YYYY-MM-DD').tz('Asia/Jakarta').isAfter(dayjs().tz('Asia/Jakarta'))
+    ) {
       console.log('Create reminder');
       ctx.reply(`Pengingat sudah dijadwalkan! akan aku ingatkan di H-1 ya 👍`, {
         reply_to_message_id: messageId

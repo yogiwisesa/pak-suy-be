@@ -48,10 +48,16 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.handleKata = exports.handleCatat = void 0;
 var dayjs_1 = __importDefault(require("dayjs"));
+var timezone_1 = __importDefault(require("dayjs/plugin/timezone"));
+var utc_1 = __importDefault(require("dayjs/plugin/utc"));
 var qs_1 = __importDefault(require("qs"));
+// @ts-ignore
 var extract_tanggal_1 = __importDefault(require("extract-tanggal"));
 var api_1 = require("../api");
 var db_1 = __importDefault(require("../db"));
+dayjs_1.default.extend(utc_1.default);
+dayjs_1.default.extend(timezone_1.default);
+dayjs_1.default.tz.setDefault('Asia/Jakarta');
 var followUpQueue = {};
 exports.handleCatat = function (ctx) { return __awaiter(void 0, void 0, void 0, function () {
     var message, chat, note, groupId, date, findByDate, noteRoot, newNotes;
@@ -131,7 +137,9 @@ exports.handleKata = function (ctx) { return __awaiter(void 0, void 0, void 0, f
                     text.includes('UAS');
                 if (((_g = data.result) === null || _g === void 0 ? void 0 : _g.kata.length) && time && (isTugas || isUjian)) {
                     date = extract_tanggal_1.default(text);
-                    if (dayjs_1.default(date.DateExtracted).isAfter(dayjs_1.default())) {
+                    console.log('Reminder date: ', date.DateExtracted);
+                    console.log('Current date: ', dayjs_1.default().format('YYYY-MM-DD HH:mm:ss'));
+                    if (dayjs_1.default(date.DateExtracted, 'YYYY-MM-DD').isAfter(dayjs_1.default())) {
                         console.log('Create reminder');
                         ctx.reply("Pengingat sudah dijadwalkan! akan aku ingatkan di H-1 ya \uD83D\uDC4D", {
                             reply_to_message_id: messageId

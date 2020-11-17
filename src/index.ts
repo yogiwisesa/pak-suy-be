@@ -5,10 +5,17 @@ import bodyParser from 'body-parser';
 import sourceMasourpSupport from 'source-map-support';
 import cors from 'cors';
 import dayjs from 'dayjs';
+import timezone from 'dayjs/plugin/timezone';
+import utc from 'dayjs/plugin/utc';
 import routes from './routes';
 import botHandler from './bot-handler';
 import db from './db';
 import { BASE_URL } from './constants';
+
+dayjs.extend(utc);
+dayjs.extend(timezone);
+
+dayjs.tz.setDefault('Asia/Jakarta');
 
 sourceMasourpSupport.install();
 

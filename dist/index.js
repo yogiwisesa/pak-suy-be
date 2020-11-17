@@ -46,10 +46,15 @@ var body_parser_1 = __importDefault(require("body-parser"));
 var source_map_support_1 = __importDefault(require("source-map-support"));
 var cors_1 = __importDefault(require("cors"));
 var dayjs_1 = __importDefault(require("dayjs"));
+var timezone_1 = __importDefault(require("dayjs/plugin/timezone"));
+var utc_1 = __importDefault(require("dayjs/plugin/utc"));
 var routes_1 = __importDefault(require("./routes"));
 var bot_handler_1 = __importDefault(require("./bot-handler"));
 var db_1 = __importDefault(require("./db"));
 var constants_1 = require("./constants");
+dayjs_1.default.extend(utc_1.default);
+dayjs_1.default.extend(timezone_1.default);
+dayjs_1.default.tz.setDefault('Asia/Jakarta');
 source_map_support_1.default.install();
 var env = ts_dotenv_1.load({
     TELEGRAF: String,
@@ -63,6 +68,13 @@ app.use(cors_1.default({ origin: '*' }));
 app.use(body_parser_1.default.json());
 app.use(routes_1.default);
 bot_handler_1.default(bot);
+app.get('/', function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
+    return __generator(this, function (_a) {
+        return [2 /*return*/, res.send({
+                status: 'ok'
+            })];
+    });
+}); });
 app.get('/api/start-exam/:examId', function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
     var examId, exam, group, promises;
     return __generator(this, function (_a) {
@@ -109,6 +121,7 @@ app.post('/api/submit-exam', function (req, res) { return __awaiter(void 0, void
                 if (!(student === null || student === void 0 ? void 0 : student.parentId)) return [3 /*break*/, 3];
                 countChoice_1 = 0;
                 countEssay_1 = 0;
+                // @ts-ignore
                 body.problems.forEach(function (problem) {
                     if (problem.answers.length) {
                         countChoice_1 += 1;
@@ -188,6 +201,7 @@ app.get('/run-cron', function (req, res) {
         status: 'cron running'
     });
 });
+console.log('Current date: ', dayjs_1.default().tz('Asia/Jakarta').format('YYYY-MM-DD HH:mm:ss'));
 var port = process.env.PORT || 5000;
 app.listen(port, function () {
     console.log("Api Running - Port: " + port);
