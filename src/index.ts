@@ -151,8 +151,9 @@ const checkReminder = () => {
       studentMsg = 'Hai, jangan lupa ya besok ada tugas yang harus dikumpulkan';
     }
     console.log('--------------------');
+    console.log('Group: ', group);
     console.log('Sending reminder: ', reminder.groupId);
-    await bot.telegram.sendMessage(group.groupId, groupMsg);
+    await bot.telegram.sendMessage(reminder.groupId, groupMsg);
     group.students?.forEach(async (student) => {
       console.log('Sending reminder to student & parent: ', student.id, ' - ', student.parentId);
       await bot.telegram.sendMessage(student.id || '', studentMsg);
