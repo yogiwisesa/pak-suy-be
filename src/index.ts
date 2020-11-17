@@ -130,32 +130,31 @@ if (!isRunning) {
 const checkReminder = () => {
   const reminders = db
     .get('reminder')
-    .filter((item) => !item.isNotified && dayjs(item.date, 'YYYY-MM-DD').isAfter(dayjs()))
+    .filter((item) => !item.isNotified && dayjs(item.date, 'YYYY-MM-DD').diff(dayjs(), 'h') <= 24)
     .value();
 
   reminders.forEach(async (reminder) => {
-    const diff = dayjs(reminder.date, 'YYYY-MM-DD').diff(dayjs(), 'h');
-    console.log(diff);
-    if (diff <= 24) {
-      // Send notif
-      const group = db.get('groups').find({ groupId: reminder.groupId }).value();
+    // Send notif
+    const group = db.get('groups').find({ groupId: reminder.groupId }).value();
 
-      let parentMsg =
-        'Hai, Orang tua siswa. Saya mau mengingatkan besok anak anda ada ujian, mohon diingatkan untuk belajar 🥇';
-      let groupMsg = 'Jangan lupa ya besok kita ada ujian 😄';
-      let studentMsg = 'Hai, jangan lupa belajar ya, besok ada ujian 😁';
-      if (reminder.type === 'tugas') {
-        groupMsg = 'Jangan lupa ya besok harus mengumpulkan tugas 🙏';
-        parentMsg =
-          'Hai, Orang tua siswa. Anak anda besok harus mengumpulkan tugas, mohon diingatkan untuk dikerjakan ya 🏆';
-        studentMsg = 'Hai, jangan lupa ya besok ada tugas yang harus dikumpulkan';
-      }
-      await bot.telegram.sendMessage(group.groupId, groupMsg);
-      group.students?.forEach(async (student) => {
-        await bot.telegram.sendMessage(student.id || '', studentMsg);
-        await bot.telegram.sendMessage(student.parentId || '', parentMsg);
-      });
+    let parentMsg =
+      'Hai, Orang tua siswa. Saya mau mengingatkan besok anak anda ada ujian, mohon diingatkan untuk belajar 🥇';
+    let groupMsg = 'Jangan lupa ya besok kita ada ujian 😄';
+    let studentMsg = 'Hai, jangan lupa belajar ya, besok ada ujian 😁';
+    if (reminder.type === 'tugas') {
+      groupMsg = 'Jangan lupa ya besok harus mengumpulkan tugas 🙏';
+      parentMsg =
+        'Hai, Orang tua siswa. Anak anda besok harus mengumpulkan tugas, mohon diingatkan untuk dikerjakan ya 🏆';
+      studentMsg = 'Hai, jangan lupa ya besok ada tugas yang harus dikumpulkan';
     }
+    console.log('--------------------');
+    console.log('Sending reminder: ', reminder.groupId);
+    await bot.telegram.sendMessage(group.groupId, groupMsg);
+    group.students?.forEach(async (student) => {
+      console.log('Sending reminder to student & parent: ', student.id, ' - ', student.parentId);
+      await bot.telegram.sendMessage(student.id || '', studentMsg);
+      await bot.telegram.sendMessage(student.parentId || '', parentMsg);
+    });
   });
   console.log(reminders);
 };
