@@ -99,7 +99,7 @@ export const handleKata = async (ctx: TelegrafContext) => {
     text.includes('UAS');
 
   if (data.result?.kata.length && time && (isTugas || isUjian)) {
-    const date = et(text);
+    const date = et(text.toLowerCase());
     console.log('Reminder date: ', dayjs(date.DateExtracted, 'YYYY-MM-DD').tz('Asia/Jakarta'));
     console.log('Current date: ', dayjs().tz('Asia/Jakarta').format('YYYY-MM-DD HH:mm:ss'));
     if (
