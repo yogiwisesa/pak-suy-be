@@ -93,6 +93,7 @@ export const handleKata = async (ctx: TelegrafContext) => {
 
   if (data.result?.kata.length && time && (isTugas || isUjian)) {
     const date = et(text);
+    console.log('Reminder date: ', date.DateExtracted);
     if (dayjs(date.DateExtracted).isAfter(dayjs())) {
       console.log('Create reminder');
       ctx.reply(`Pengingat sudah dijadwalkan! akan aku ingatkan di H-1 ya 👍`, {
